@@ -1,5 +1,5 @@
-## QUESTION 1
-
+   ## QUESTION 1
+require 'pry'
 pokemon = [
   {
     "id": 1,
@@ -60,6 +60,42 @@ pokemon = [
 }
 ]
 
+# pokemon.each do |bulbasaur|
+#   bulbasaur[:abilities].each do |abilities|
+#     puts abilities[:ability][:url]
+#   end
+# end
+# pokeball = []
+# pokemon.each do |pokemon|
+#   pokemon.find do |key, value|
+#     if key == :base_experience && value > 40
+#      pokeball << pokemon[:name]
+#    end
+#   end
+# @answer = pokeball[0]
+# end
+#  puts @answer
+#  puts pokeball
+#
+#
+# pokemon.each do |pokemon|
+#   pokemon.find do |key, value|
+#     if key == :name
+#       puts value
+#     end
+#   end
+# end
+
+pokemon.each do |pokemon|
+  pokemon.any? do |key, value|
+    if key == :weight && value > 60
+
+      puts true
+    else
+      puts false
+    end
+  end
+end
 
 # How would you get the url for Bulbasaur's ability?
 # How would you return the first pokemon with base experience over 40?
